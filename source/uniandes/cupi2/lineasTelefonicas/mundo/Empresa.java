@@ -46,10 +46,9 @@ public class Empresa
     public Empresa( )
     {
         linea1 = new LineaTelefonica( );
-
-
         // TODO Parte3 PuntoA: Construir linea2 y linea3.
-
+        linea2 = new LineaTelefonica();
+        linea3 = new LineaTelefonica();
     }
 
     /**
@@ -59,6 +58,7 @@ public class Empresa
     public LineaTelefonica darLinea1( )
     {
         // TODO Parte3 PuntoB: Completar el método según la documentación dada.
+        return linea1;
     }
 
     /**
@@ -68,6 +68,7 @@ public class Empresa
     public LineaTelefonica darLinea2( )
     {
         // TODO Parte3 PuntoC: Completar el método según la documentación dada.
+        return linea2;
     }
 
     /**
@@ -77,6 +78,7 @@ public class Empresa
     public LineaTelefonica darLinea3( )
     {
         // TODO Parte3 PuntoD: Completar el método según la documentación dada.
+        return linea3;
     }
 
     /**
@@ -86,6 +88,9 @@ public class Empresa
 	public int darTotalNumeroLlamadas( )
 	{
         // TODO Parte3 PuntoE: Completar el método según la documentación dada.
+        return linea1.darNumeroLlamadas() + 
+               linea2.darNumeroLlamadas() + 
+               linea3.darNumeroLlamadas();
 	}
 
 	/**
@@ -95,6 +100,9 @@ public class Empresa
 	public int darTotalMinutos( )
 	{
         // TODO Parte3 PuntoF: Completar el método según la documentación dada.
+        return linea1.darTotalMinutos() + 
+               linea2.darTotalMinutos() + 
+               linea3.darTotalMinutos();
 	}
 
 	/**
@@ -104,6 +112,9 @@ public class Empresa
 	public double darTotalCostoLlamadas( )
 	{        
         // TODO Parte3 PuntoG: Completar el método según la documentación dada.
+        return linea1.darCostoLlamadas() + 
+               linea2.darCostoLlamadas() + 
+               linea3.darCostoLlamadas();
 	}
 
 	/**
@@ -113,6 +124,11 @@ public class Empresa
 	public double darCostoPromedioMinuto( )
 	{
         // TODO Parte3 PuntoH: Completar el método según la documentación dada.
+        int totalMinutos = darTotalMinutos();
+        if (totalMinutos == 0) {
+            return 0;
+        }
+        return darTotalCostoLlamadas() / totalMinutos;
 	}
 
 	/**
@@ -133,6 +149,7 @@ public class Empresa
     public void agregarLlamadaLocalLinea2( int pMinutos )
     {
         // TODO Parte3 PuntoI: Completar el método según la documentación dada.
+        linea2.agregarLlamadaLocal(pMinutos);
     }
 
     /**
@@ -143,6 +160,7 @@ public class Empresa
     public void agregarLlamadaLocalLinea3( int pMinutos )
     {
         // TODO Parte3 PuntoJ: Completar el método según la documentación dada.
+        linea3.agregarLlamadaLocal(pMinutos);
     }
 
     /**
@@ -163,6 +181,7 @@ public class Empresa
     public void agregarLlamadaLargaDistanciaLinea2( int pMinutos )
     {
         // TODO Parte3 PuntoK: Completar el método según la documentación dada.
+        linea2.agregarLlamadaLargaDistancia(pMinutos);
     }
 
     /**
@@ -173,6 +192,7 @@ public class Empresa
     public void agregarLlamadaLargaDistanciaLinea3( int pMinutos )
     {
         // TODO Parte3 PuntoL: Completar el método según la documentación dada.
+        linea3.agregarLlamadaLargaDistancia(pMinutos);
     }
 
     /**
@@ -193,6 +213,7 @@ public class Empresa
     public void agregarLlamadaCelularLinea2( int pMinutos )
     {
         // TODO Parte3 PuntoM: Completar el método según la documentación dada.
+        linea2.agregarLlamadaCelular(pMinutos);
     }
 
     /**
@@ -203,6 +224,7 @@ public class Empresa
     public void agregarLlamadaCelularLinea3( int pMinutos )
     {
         // TODO Parte3 PuntoN: Completar el método según la documentación dada.
+        linea3.agregarLlamadaCelular(pMinutos);
     }
 
     /**
@@ -213,6 +235,8 @@ public class Empresa
     {
         linea1.reiniciar( );
         // TODO Parte3 PuntoB: Completar el método para reiniciar las lineas 2 y 3.
+        linea2.reiniciar();
+        linea3.reiniciar();
     }
 
     //-----------------------------------------------------------------
@@ -236,5 +260,4 @@ public class Empresa
     {
         return "Respuesta 2";
     }
-
 }
