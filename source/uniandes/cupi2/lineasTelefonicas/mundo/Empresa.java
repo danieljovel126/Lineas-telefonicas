@@ -15,7 +15,6 @@ package uniandes.cupi2.lineasTelefonicas.mundo;
  */
 public class Empresa
 {
-
     //-----------------------------------------------------------------
     // Atributos
     //-----------------------------------------------------------------
@@ -46,14 +45,8 @@ public class Empresa
     public Empresa( )
     {
         linea1 = new LineaTelefonica( );
-        // TODO Parte3 PuntoA: Construir linea2 y linea3.
-<<<<<<< HEAD
-        linea2 = new LineaTelefonica();
-        linea3 = new LineaTelefonica();
-=======
         linea2 = new LineaTelefonica( );
         linea3 = new LineaTelefonica( );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
     }
 
     /**
@@ -62,12 +55,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea1( )
     {
-        // TODO Parte3 PuntoB: Completar el método según la documentación dada.
-<<<<<<< HEAD
         return linea1;
-=======
-    	return linea1;
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
     }
 
     /**
@@ -76,12 +64,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea2( )
     {
-        // TODO Parte3 PuntoC: Completar el método según la documentación dada.
-<<<<<<< HEAD
         return linea2;
-=======
-    	return linea2;
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
     }
 
     /**
@@ -90,12 +73,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea3( )
     {
-        // TODO Parte3 PuntoD: Completar el método según la documentación dada.
-<<<<<<< HEAD
         return linea3;
-=======
-    	return linea3;
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
     }
 
     /**
@@ -104,14 +82,9 @@ public class Empresa
 	 */
 	public int darTotalNumeroLlamadas( )
 	{
-        // TODO Parte3 PuntoE: Completar el método según la documentación dada.
-<<<<<<< HEAD
         return linea1.darNumeroLlamadas() + 
                linea2.darNumeroLlamadas() + 
                linea3.darNumeroLlamadas();
-=======
-		return linea1.darNumeroLlamadas() + linea2.darNumeroLlamadas() + linea3.darNumeroLlamadas();
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
 	}
 
 	/**
@@ -120,14 +93,9 @@ public class Empresa
 	 */
 	public int darTotalMinutos( )
 	{
-        // TODO Parte3 PuntoF: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        return linea1.darTotalMinutos() + 
-               linea2.darTotalMinutos() + 
-               linea3.darTotalMinutos();
-=======
-		 return linea1.darNumeroMinutos() + linea2.darNumeroMinutos() + linea3.darNumeroMinutos();
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        return linea1.darNumeroMinutos() + 
+               linea2.darNumeroMinutos() + 
+               linea3.darNumeroMinutos();
 	}
 
 	/**
@@ -136,14 +104,9 @@ public class Empresa
 	 */
 	public double darTotalCostoLlamadas( )
 	{        
-        // TODO Parte3 PuntoG: Completar el método según la documentación dada.
-<<<<<<< HEAD
         return linea1.darCostoLlamadas() + 
                linea2.darCostoLlamadas() + 
                linea3.darCostoLlamadas();
-=======
-		return linea1.darCostoLlamadas() + linea2.darCostoLlamadas() + linea3.darCostoLlamadas();
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
 	}
 
 	/**
@@ -152,23 +115,11 @@ public class Empresa
 	 */
 	public double darCostoPromedioMinuto( )
 	{
-        // TODO Parte3 PuntoH: Completar el método según la documentación dada.
-<<<<<<< HEAD
         int totalMinutos = darTotalMinutos();
         if (totalMinutos == 0) {
             return 0;
         }
         return darTotalCostoLlamadas() / totalMinutos;
-=======
-		  double totalCosto = darTotalCostoLlamadas();
-	        int totalMinutos = darTotalMinutos();
-
-	        if (totalMinutos > 0) {
-	            return totalCosto / totalMinutos;
-	        } else {
-	            return 0.0; // Evitar división por cero si no hay minutos
-	}
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
 	}
 
 	/**
@@ -188,12 +139,7 @@ public class Empresa
      */
     public void agregarLlamadaLocalLinea2( int pMinutos )
     {
-        // TODO Parte3 PuntoI: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea2.agregarLlamadaLocal(pMinutos);
-=======
-    	 linea2.agregarLlamadaLocal( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea2.agregarLlamadaLocal( pMinutos );
     }
 
     /**
@@ -203,12 +149,7 @@ public class Empresa
      */
     public void agregarLlamadaLocalLinea3( int pMinutos )
     {
-        // TODO Parte3 PuntoJ: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea3.agregarLlamadaLocal(pMinutos);
-=======
-    	 linea3.agregarLlamadaLocal( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea3.agregarLlamadaLocal( pMinutos );
     }
 
     /**
@@ -228,12 +169,7 @@ public class Empresa
      */
     public void agregarLlamadaLargaDistanciaLinea2( int pMinutos )
     {
-        // TODO Parte3 PuntoK: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea2.agregarLlamadaLargaDistancia(pMinutos);
-=======
-    	 linea2.agregarLlamadaLargaDistancia( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea2.agregarLlamadaLargaDistancia( pMinutos );
     }
 
     /**
@@ -243,12 +179,7 @@ public class Empresa
      */
     public void agregarLlamadaLargaDistanciaLinea3( int pMinutos )
     {
-        // TODO Parte3 PuntoL: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea3.agregarLlamadaLargaDistancia(pMinutos);
-=======
-    	 linea3.agregarLlamadaLargaDistancia( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea3.agregarLlamadaLargaDistancia( pMinutos );
     }
 
     /**
@@ -268,12 +199,7 @@ public class Empresa
      */
     public void agregarLlamadaCelularLinea2( int pMinutos )
     {
-        // TODO Parte3 PuntoM: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea2.agregarLlamadaCelular(pMinutos);
-=======
-    	linea2.agregarLlamadaCelular( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea2.agregarLlamadaCelular( pMinutos );
     }
 
     /**
@@ -283,12 +209,7 @@ public class Empresa
      */
     public void agregarLlamadaCelularLinea3( int pMinutos )
     {
-        // TODO Parte3 PuntoN: Completar el método según la documentación dada.
-<<<<<<< HEAD
-        linea3.agregarLlamadaCelular(pMinutos);
-=======
-    	linea3.agregarLlamadaCelular( pMinutos );
->>>>>>> ff01648d25f7855c93cdf7a8df17f2abf7a6e9f4
+        linea3.agregarLlamadaCelular( pMinutos );
     }
 
     /**
@@ -298,9 +219,8 @@ public class Empresa
     public void reiniciar( )
     {
         linea1.reiniciar( );
-        // TODO Parte3 PuntoB: Completar el método para reiniciar las lineas 2 y 3.
-        linea2.reiniciar();
-        linea3.reiniciar();
+        linea2.reiniciar( );
+        linea3.reiniciar( );
     }
 
     //-----------------------------------------------------------------
