@@ -19,6 +19,7 @@ import javax.swing.JPanel;
  */
 public class PanelImagen extends JPanel
 {
+	private static final long serialVersionUID = 1L;
 
     //-----------------------------------------------------------------
     // Atributos de Interfaz

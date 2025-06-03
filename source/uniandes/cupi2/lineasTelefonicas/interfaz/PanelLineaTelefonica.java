@@ -33,6 +33,7 @@ import javax.swing.border.TitledBorder;
  */
 public class PanelLineaTelefonica extends JPanel implements ActionListener
 {
+	private static final long serialVersionUID = 1L;
 
     //-----------------------------------------------------------------
     // Constantes

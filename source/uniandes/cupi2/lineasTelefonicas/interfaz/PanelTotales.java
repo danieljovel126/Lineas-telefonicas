@@ -26,6 +26,7 @@ import javax.swing.border.TitledBorder;
  */
 public class PanelTotales extends JPanel
 {
+	private static final long serialVersionUID = 1L;
 
     //-----------------------------------------------------------------
     // Atributos de Interfaz

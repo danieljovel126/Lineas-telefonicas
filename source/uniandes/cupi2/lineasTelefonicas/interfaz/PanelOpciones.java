@@ -23,6 +23,7 @@ import javax.swing.border.TitledBorder;
  */
 public class PanelOpciones extends JPanel implements ActionListener
 {
+	private static final long serialVersionUID = 1L;
 
     //-----------------------------------------------------------------
     // Constantes

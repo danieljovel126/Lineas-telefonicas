@@ -25,6 +25,8 @@ import uniandes.cupi2.lineasTelefonicas.mundo.Empresa;
  */
 public class InterfazLineasTelefonicas extends JFrame
 {
+	private static final long serialVersionUID = 1L;
+
     // -----------------------------------------------------------------
     // Atributos
     // -----------------------------------------------------------------
